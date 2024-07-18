@@ -1,8 +1,16 @@
 {
-  "name": "typescript",
-  "version": "0.0.0",
+  "name": "tree-of-life",
   "private": true,
-  "dependencies": {
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
     "@types/three": "^0.131.1",
     "three": "^0.132.2"
   }

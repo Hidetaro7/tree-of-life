@@ -1,10 +1,14 @@
-// Import stylesheets
-import './style.css';
+import "./style.css";
 
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import Sefirot from "./Sefirot.js";
 
-import Sefirot from './Sefirot.js';
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+  <div>
+    <canvas id="bg"></canvas>
+  </div>
+`;
 
 // init
 const camera = new THREE.PerspectiveCamera(

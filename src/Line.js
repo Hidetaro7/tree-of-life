@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from "three";
 export default class Line extends THREE.Line {
   constructor(positions) {
     super();
