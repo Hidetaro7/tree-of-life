@@ -1,14 +1,20 @@
 import "./style.css";
-
+//@ts-ignore
+import Sefirot from "./Sefirot.js";
+//@ts-ignore
+import message from "./Message.js";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import Sefirot from "./Sefirot.js";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
-    <canvas id="bg"></canvas>
+  <div class="container">
+    <div class="message"></div>
   </div>
 `;
+
+// message
+
+message();
 
 // init
 const camera = new THREE.PerspectiveCamera(
@@ -24,6 +30,7 @@ scene.background = new THREE.Color(0x101010);
 
 const sefirot = new Sefirot();
 scene.add(sefirot);
+sefirot.position.y = 1;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -42,8 +49,16 @@ const ambientLight = new THREE.AmbientLight(0x333333);
 scene.add(ambientLight);
 
 // animation
-function animation(time) {
-  //sefirot.rotation.y = time / 1000;
+function animation(time: number) {
+  sefirot.rotation.y = time / 2000;
   controls.update();
   renderer.render(scene, camera);
 }
+
+// ウインドウ幅に合わせる
+
+window.addEventListener("resize", () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});

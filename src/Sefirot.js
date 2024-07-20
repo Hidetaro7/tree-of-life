@@ -1,6 +1,7 @@
-import * as THREE from 'three';
-import Sefirah from './Sefirah.js';
-import Line from './Line.js';
+import * as THREE from "three";
+import Sefirah from "./Sefirah.js";
+import Line from "./Line.js";
+
 export default class Sefirot extends THREE.Object3D {
   constructor() {
     super();
@@ -23,7 +24,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90)) * R,
       y: Math.sin(this.radian(90)) * R,
       color: 0xefefef,
-      name: 'ケテル',
+      name: "ケテル",
     });
 
     sefirahs.push({
@@ -31,7 +32,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90 - 60)) * R,
       y: Math.sin(this.radian(90 - 60)) * R,
       color: 0xcccccc,
-      name: 'コクマー',
+      name: "コクマー",
     });
 
     sefirahs.push({
@@ -39,7 +40,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90 + 60)) * R,
       y: Math.sin(this.radian(90 + 60)) * R,
       color: 0x333333,
-      name: 'ビナー',
+      name: "ビナー",
     });
 
     sefirahs.push({
@@ -47,7 +48,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90 - 120)) * R,
       y: Math.sin(this.radian(90 - 120)) * R,
       color: 0x0000ff,
-      name: 'ケセド',
+      name: "ケセド",
     });
 
     sefirahs.push({
@@ -55,7 +56,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90 + 120)) * R,
       y: Math.sin(this.radian(90 + 120)) * R,
       color: 0xff0000,
-      name: 'ゲブラー',
+      name: "ゲブラー",
     });
 
     sefirahs.push({
@@ -63,7 +64,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(-90)) * R,
       y: Math.sin(this.radian(-90)) * R,
       color: 0xffff00,
-      name: 'ティファレット',
+      name: "ティファレット",
     });
 
     sefirahs.push({
@@ -71,7 +72,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90 - 60)) * R,
       y: Math.sin(this.radian(90 - 60)) * R - R * 2,
       color: 0x00ff00,
-      name: 'ネツァク',
+      name: "ネツァク",
     });
 
     sefirahs.push({
@@ -79,7 +80,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90 + 60)) * R,
       y: Math.sin(this.radian(90 + 60)) * R - R * 2,
       color: 0xffb74c,
-      name: 'ホド',
+      name: "ホド",
     });
 
     sefirahs.push({
@@ -87,7 +88,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(90 + 60)) * 0,
       y: Math.sin(this.radian(90 + 60)) * 0 - R * 2,
       color: 0x6a0dad,
-      name: 'イェソド',
+      name: "イェソド",
     });
 
     sefirahs.push({
@@ -95,7 +96,7 @@ export default class Sefirot extends THREE.Object3D {
       x: Math.cos(this.radian(-90)) * R,
       y: Math.sin(this.radian(-90)) * R - R * 2,
       color: 0x00ffff,
-      name: 'マルクト',
+      name: "マルクト",
     });
 
     sefirahs.forEach((pos) => {
