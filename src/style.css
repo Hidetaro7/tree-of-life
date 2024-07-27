@@ -15,7 +15,14 @@ canvas {
 }
 
 .message {
-  position: absolute;
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding: 2rem;
+  margin: auto;
+  max-width: 600px;
+  line-height: 1.8;
+  /* position: absolute;
   z-index: 10;
   color: white;
   padding-left: 2rem;
@@ -24,5 +31,5 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 600px;
+  max-width: 600px; */
 }

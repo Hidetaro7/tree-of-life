@@ -31,6 +31,7 @@ scene.background = new THREE.Color(0x101010);
 const sefirot = new Sefirot();
 scene.add(sefirot);
 sefirot.position.y = 1;
+sefirot.rotation.x = -0.3;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
